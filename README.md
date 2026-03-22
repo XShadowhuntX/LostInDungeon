@@ -97,7 +97,6 @@ Planned features:
 
 ## 💡 Notes
 
-* Input is **case-insensitive**
 * Invalid input may lead to failure or death
 * The game is designed to be expanded continuously
 
