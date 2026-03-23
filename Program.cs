@@ -137,7 +137,7 @@ namespace DungeonGame
                     small = true;
                     beauty = true;
 
-                    Narrate("You are a woman. You remember seeing yourself in the mirror.");
+                    Narrate("You are a woman. You remember seeing yourself in the mirror you are beautiful.");
                     Narrate("You are short and quick.");
                     break;
                 }
@@ -370,8 +370,8 @@ namespace DungeonGame
             Narrate("A goblin is crouched beside a broken barrel eating a rat.");
             Narrate("It hasn't noticed you yet.");
             Narrate("A Goblinsword is laying against the barrel.");
-            Narrate("You may ATTACK(With your bare hands), GRAB(to grab the sword), or TALK(Maybe THIS goblin is friendly).");
-            Console.Write("Choose ATTACK, GRAB, or TALK: ");
+            Narrate("You may ATTACK(With your bare hands), GRAB(to grab the sword), TALK(Maybe THIS goblin is friendly or BACK(You dont want to deal with this creature maybe the other was is better)).");
+            Console.Write("Choose ATTACK, GRAB, TALK, or BACK: ");
 
             string goblinChoice = Console.ReadLine().Trim().ToUpper();
 
@@ -574,14 +574,21 @@ namespace DungeonGame
                     CheckHealth();
                 }
             }
-            else
-            {
-                Narrate("That was not a valid choice.");
-                Narrate("The Goblin notices you and slaughters you on the spot.");
-                EndGame();
-            }
 
-            Narrate("");
+            else if (goblinChoice == "BACK")
+            {
+                Narrate("You decide this is not worth the risk.");
+                Narrate("You carefully step back out of the room...");
+                Narrate("As you reach the Entrace you see three Adventurer´s");
+                Narrate("Two Men and a Woman");
+                Narrate("The Woman says:'See I told you, you didnt kill.'");
+                Narrate("The Men want to go after you as they see the goblin behind you noticed you.");
+                Narrate("The Woman which seems to be their leader ordered the Men back.");
+                Narrate("She started laughing as she pulled a lever that activated a grid falling down and blocking the way.");
+                Narrate("The Goblin picked up his sword and started laughing menacingly.");
+                Narrate("Unarmed and against the wall, you have no chance against him.");
+                Narrate("He chops you to bits and the last thing you perceive is the grin of the Adventurer´s combined with the laughter of the goblin.");
+            }
         }
 
         static void IronDoorRoom()
@@ -794,3 +801,7 @@ namespace DungeonGame
         }
     }
 }
+
+// --> später wahl Rache oder raus aus dem Dungeon.
+// --> Rache man fällt in Hölle? Hellvolution
+// --> entkommen aus dem Dungeon man geht durch einen kleinen Wald Ziel Stadt --> Stadt: Taverne der Meister der Waffe ist von deiner Geschichte... Evolution Ritter mäßig
